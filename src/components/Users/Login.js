@@ -60,7 +60,7 @@ const Login = ({isAuthenticated,login}) =>{
             value="Login"
             />
             <p className="forgot "align="center">New To TawaSol?
-             <Link to="/home">SignUp</Link></p>
+             <Link to="/register">SignUp</Link></p>
         </form>
         </div>
     )
