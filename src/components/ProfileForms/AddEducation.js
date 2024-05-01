@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useNavigate } from 'react-router-dom';
 import {connect} from "react-redux";
 import { addEducation } from "../../redux/modules/profiles";
+import { loadUser } from '../../redux/modules/users';
 
 
 const AddEducation =({addEducation})=>{
@@ -16,6 +17,12 @@ const AddEducation =({addEducation})=>{
         to:"",
         current:false 
     })
+    useEffect(()=>{
+        if(localStorage.token){
+          setAuthToken(localStorage.token)
+        }
+        store.dispatch(loadUser())
+      },[])
 
     const {
         school,
