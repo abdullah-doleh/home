@@ -29,7 +29,7 @@ const Login = ({isAuthenticated,login}) =>{
     }
     return(
         <div className="main login">
-            <p className="form-title" align="center">SignIn</p>
+            <p className="form-title" align="center">Sign in</p>
         <form className="form1" onSubmit={onSubmit}>
            
              <input
@@ -60,7 +60,7 @@ const Login = ({isAuthenticated,login}) =>{
             value="Login"
             />
             <p className="forgot "align="center">New To TawaSol?
-             <Link to="/">SignUp</Link></p>
+             <Link to="/Register"> SignUp </Link></p>
         </form>
         </div>
     )

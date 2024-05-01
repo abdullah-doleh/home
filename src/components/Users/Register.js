@@ -84,7 +84,7 @@ const Register = ({isAuthenticated,register,showAlertMessage}) =>{
             value="Register"
             />
             <p className="forgot "align="center">Already have an account ?
-             <Link to="/home">Sign In</Link></p>
+             <Link to="/home"> Sign In</Link></p>
         </form>
         </div>
     )
