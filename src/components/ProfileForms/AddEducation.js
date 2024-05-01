@@ -6,6 +6,7 @@ import {connect} from "react-redux";
 import { addEducation } from "../../redux/modules/profiles";
 import { loadUser } from '../../redux/modules/users';
 import store from "../../redux/store";
+import { setAuthToken } from '../../utils';
 
 const AddEducation =({addEducation})=>{
     const history = useNavigate();
