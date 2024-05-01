@@ -27,7 +27,7 @@ const AddExperience =({addExperience})=>{
     const onSubmit = (event)=>{
         event.preventDefault()
         addExperience(formData,history);
-        history("home");
+        history("/home");
     }
     return(
         <div className="main" style={{textAlign:"center" ,width:700 , padding:15}}>
