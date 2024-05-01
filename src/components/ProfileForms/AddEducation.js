@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {connect} from "react-redux";
 import { addEducation } from "../../redux/modules/profiles";
 import { loadUser } from '../../redux/modules/users';
-
+import store from "../../redux/store";
 
 const AddEducation =({addEducation})=>{
     const history = useNavigate();
