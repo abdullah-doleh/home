@@ -29,7 +29,7 @@ function Sidebar({users: {user},getCurrentProfile}){
         <div>
             <div className="sidebar">
                 <div>
-                    <Link to="/home"><img src={image} onError={onError} className="profile" alt=""></img></Link>
+                    <Link to="/home"><img src={image} onError={onError} className="profile" alt="image"></img></Link>
                 </div>
                 <Link to="/home">home</Link> 
                 <Link to="/post">Posts</Link>

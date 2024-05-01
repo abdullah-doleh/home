@@ -3,6 +3,7 @@ import { connect } from "react-redux"//to connect this component to redux store
 
 import {Link , Navigate} from "react-router-dom";
 
+
 import PropTypes from "prop-types"; // to tell the component what are the expected component 
 
 import {register} from "../../redux/modules/users";
@@ -23,16 +24,18 @@ const Register = ({isAuthenticated,register,showAlertMessage}) =>{
         return setFormDate({...formData,[event.target.name]: event.target.value});
     };
     const onSubmit = async(event)=>{  
+       
         event.preventDefault();//to prevent refresh or load on submit 
         if(password !==password2){
             showAlertMessage("Password dose not match","error");
+
 
         }else{
             register({name,email,password});
         }
     }
     if(isAuthenticated){
-        return <Navigate to="/logi"/>
+        return <Navigate to="/login"/>
     }
     return(
         <div className="main register">
@@ -81,7 +84,7 @@ const Register = ({isAuthenticated,register,showAlertMessage}) =>{
             value="Register"
             />
             <p className="forgot "align="center">Already have an account ?
-             <Link to="/login">Sign In</Link></p>
+             <Link to="/home">Sign In</Link></p>
         </form>
         </div>
     )
@@ -92,7 +95,7 @@ Register.propoTypes={//validation to make sure that the function are sent to the
     showAlertMessage : PropTypes.func.isRequired
 };
 
-const mapStateToProps=(state)=>{
+const mapStateToProps=(state)=>{ 
     return{
         isAuthenticated: state.users.isAuthenticated
     }
