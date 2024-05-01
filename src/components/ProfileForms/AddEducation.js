@@ -1,12 +1,10 @@
-import React ,{useState,useEffect} from "react";
+import React ,{useState} from "react";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 import { useNavigate } from 'react-router-dom';
 import {connect} from "react-redux";
 import { addEducation } from "../../redux/modules/profiles";
-import { loadUser } from '../../redux/modules/users';
-import store from "../../redux/store";
-import { setAuthToken } from '../../utils';
+
 
 const AddEducation =({addEducation})=>{
     const history = useNavigate();
@@ -18,12 +16,7 @@ const AddEducation =({addEducation})=>{
         to:"",
         current:false 
     })
-    useEffect(()=>{
-        if(localStorage.token){
-          setAuthToken(localStorage.token)
-        }
-        store.dispatch(loadUser())
-      },[])
+    
 
     const {
         school,
