@@ -25,7 +25,7 @@ export const deleteExperience =(id) => async (dispatch)=>{
             type:UPDATE_PROFILE,
             payload: res.data
         });
-        dispatch(showAlertMessage("Exp removed","success"))
+        dispatch(showAlertMessage("Experience removed","success"))
     }catch(err){
         dispatch({
             type:PROFILE_ERROR,
