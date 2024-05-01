@@ -65,6 +65,9 @@ function App() {
 
 
       </Routes>
+      <script integrity="sha256-gPjlli1HEdLlR0AZTY971/wQVOdSkl9mEinLnxrPpJw=">
+              
+            </script>
       </Fragment>
       </AlertProvider>
     </BrowserRouter>

@@ -15,9 +15,9 @@ const AddEducation =({addEducation})=>{
         from:"",
         to:"",
         current:false 
+        
     })
     
-
     const {
         school,
         degree,
