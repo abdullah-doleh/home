@@ -1,6 +1,6 @@
 import axios from "axios"; // to call api
 
-const serverUrl = "https://tawasol-server-8ea12eeff4fd.herokuapp.com/";
+const serverUrl = "https://tawasol-server-8ea12eeff4fd.herokuapp.com";
 
 export const api = axios.create({
     baseURL: `${serverUrl}/api`,
