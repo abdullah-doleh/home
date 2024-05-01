@@ -49,9 +49,7 @@ export function register(formData){
 
 export function login(email, password) {
     return async function loginThunk(dispatch) {
-        try {
-            console.log(email);
-            console.log(password); 
+        try { 
             const res = await api.post('/users/login', { email, password });
            
             dispatch({
