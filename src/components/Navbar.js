@@ -26,7 +26,7 @@ const Navbar = ({users: {isAuthenticated},logout})=>{
     return(
         <nav className="navbar bg-navbar">
             <h1>
-                <Link className="logo-navbar " to="/">
+                <Link className="logo-navbar " to="/home">
                     TawaSol
                 </Link>
             </h1>
