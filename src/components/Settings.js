@@ -11,7 +11,7 @@ function Settings ({deleteAccount}){
                     <p>update your profile information</p>
                 </div>
                 <div style={{marginBottom:15}}>
-                    <Link className="btn btn-primary" href="#" to="/edit-profile">
+                    <Link className="btn btn-primary" to="/edit-profile">
                         Edit Account
                     </Link>
                 </div>
@@ -19,12 +19,12 @@ function Settings ({deleteAccount}){
             <div className="post-card center">
                 <div>
                     <p>
-                        This Action will completely delete your profile data from TawaSol but will not delete your Account.
+                        This Action will completely delete your profile data from TawaSol.
                     </p>
                 </div>
                 <div>
                     <button className="btn btn-danger" onClick={()=>deleteAccount()}>
-                        Delete Profile 
+                        Delete Account
                     </button>
                 </div>
             </div>
