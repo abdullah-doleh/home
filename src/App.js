@@ -44,7 +44,7 @@ function App() {
   return (
     
     <Provider store={store}>
-    <BrowserRouter basename='/'>
+    <BrowserRouter >
     
     <AlertProvider template={AlertTemplate}  {...options}>
       
