@@ -9,8 +9,7 @@ import { getProfileImage } from "../utils";
 
 function Post({getPost, posts: {post,loading}}){
     let {id} = useParams()
-    const [image,setImage]= useState("")
-    const [errored,setErrored]= useState(false)
+  
     useEffect(()=>{
         getCurrentProfile();
         if(user){
