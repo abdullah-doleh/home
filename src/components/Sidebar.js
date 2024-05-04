@@ -32,7 +32,7 @@ function Sidebar({users: {user},getCurrentProfile}){
                     <Link to="/home"><img src={image} onError={onError} className="profile" alt="image"></img></Link>
                 </div>
                 <Link to="/home">Home</Link> 
-              <a href="https://abdullah-doleh.github.io/post" target="_blank" rel="noopener norefrrer"> <Link to="/post">Posts</Link> </a> 
+              <a href="https://abdullah-doleh.github.io/post" target="_blank" rel="noopener norefrrer">  </a> 
                 <Link to="/developers">Developers</Link>
                 <Link to="/settings">Settings</Link>
             </div>

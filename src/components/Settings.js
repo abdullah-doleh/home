@@ -19,12 +19,12 @@ function Settings ({deleteAccount}){
             <div className="post-card center">
                 <div>
                     <p>
-                        This Action will completely delete your profile data from TawaSol.
+                        This Action will completely delete your profile data from TawaSol but will not delete your Account.
                     </p>
                 </div>
                 <div>
                     <button className="btn btn-danger" onClick={()=>deleteAccount()}>
-                        Delete Account
+                        Delete Profile 
                     </button>
                 </div>
             </div>
