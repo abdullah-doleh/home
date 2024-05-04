@@ -64,8 +64,8 @@ function App() {
         <Route exact path="/profile/:id" element={<Private component={Profile}/>}/>
         <Route exact path="/settings" element={<Private component={Settings}/>}/>
         <Route exact path="/edit-profile" element={<Private component={ProfileForm}/>}/>
-        <Route exact path="/post" element={<Private component={Posts}/>}/>
-        <Route exact path="/posts/:id" element={<Private component={Post}/>}/>
+        <Route exact path="/post" element={<Private component={<Posts/>}/>}/>
+        <Route exact path="/posts/:id" element={<Private component={<Post/>}/>}/>
        
       </Routes>
       
