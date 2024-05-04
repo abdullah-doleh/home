@@ -11,7 +11,7 @@ function Settings ({deleteAccount}){
                     <p>update your profile information</p>
                 </div>
                 <div style={{marginBottom:15}}>
-                    <Link className="btn btn-primary" to="/edit-profile">
+                    <Link className="btn btn-primary" href="#" to="/edit-profile">
                         Edit Account
                     </Link>
                 </div>
