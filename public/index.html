@@ -17,14 +17,11 @@
     user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
   -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!-- Generate a nonce value -->
-  <% const crypto = require('crypto'); %>
-  <% const nonce = crypto.randomBytes(16).toString('base64'); %>
-  <!-- Content Security Policy (CSP) directives with nonce -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-<%= nonce %>'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com">
+  <!-- Content Security Policy (CSP) directives -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce=__NONCE__'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com">
   <!--
-    Notice the use of <% ... %> to generate and inject the nonce value into the CSP directive.
-    This nonce value will be replaced with the actual nonce value during server-side rendering.
+    Notice the use of "__NONCE__" as a placeholder for the nonce value.
+    This placeholder will be replaced with the actual nonce value during the build process.
   -->
   <title>React App</title>
 </head>
@@ -32,7 +29,7 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!-- Inline script with the nonce attribute -->
-  <script nonce="<%= nonce %>">
+  <script nonce="__NONCE__">
     // Your inline script code here
   </script>
   <!--
