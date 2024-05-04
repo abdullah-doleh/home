@@ -1,6 +1,7 @@
 
 import './App.css';
 import { BrowserRouter, Routes , Route } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import {Fragment , useEffect} from "react";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
@@ -42,18 +43,22 @@ function App() {
       store.dispatch(loadUser())
     },[])
   return (
+    
     <Provider store={store}>
     <BrowserRouter>
+    
     <AlertProvider template={AlertTemplate}  {...options}>
+      
     <Fragment>
       <Alert/>
       <Navbar></Navbar>
+      
       <Routes>
         <Route exact path="/" element={<Landing/>}/>
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/home" element={<Private component={Home}/>}/>
-        <Route exact path="/create-profile" element={<Private component={ProfileForm}/>}/>
+        <a href='#create-profile'> <Route  exact path="/create-profile" element={<Private component={ProfileForm}/>}/></a>
         <Route exact path="/add-education" element={<Private component={AddEducation}/>}/>
         <Route exact path="/add-experience" element={<Private component={AddExperience}/>}/>
         <Route exact path="/developers" element={<Private component={Developers}/>}/>
@@ -62,16 +67,20 @@ function App() {
         <Route exact path="/edit-profile" element={<Private component={ProfileForm}/>}/>
         <Route exact path="/post" element={<Private component={Posts}/>}/>
         <Route exact path="/posts/:id" element={<Private component={Post}/>}/>
-
-
+       
       </Routes>
+      
+      
       <script integrity="sha256-gPjlli1HEdLlR0AZTY971/wQVOdSkl9mEinLnxrPpJw=">
               
             </script>
       </Fragment>
       </AlertProvider>
+      
     </BrowserRouter>
+    
     </Provider>
+    
   );
 }
 
