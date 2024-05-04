@@ -58,7 +58,7 @@ function App() {
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/home" element={<Private component={Home}/>}/>
-        <a href='#create-profile'> <Route  exact path="/create-profile" element={<Private component={ProfileForm}/>}/></a>
+        <Route  exact path="/create-profile" element={<Private component={ProfileForm}/>}/>
         <Route exact path="/add-education" element={<Private component={AddEducation}/>}/>
         <Route exact path="/add-experience" element={<Private component={AddExperience}/>}/>
         <Route exact path="/developers" element={<Private component={Developers}/>}/>
