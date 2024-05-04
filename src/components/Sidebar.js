@@ -20,7 +20,7 @@ function Sidebar({users: {user},getCurrentProfile}){
     },[getCurrentProfile,user])
     function onError(){
         if(!errored){
-            setErrored(true);;
+            setErrored(true);
             setImage(defaultImage)
         }
         

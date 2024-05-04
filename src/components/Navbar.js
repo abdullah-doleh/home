@@ -1,6 +1,6 @@
 
 import React from "react"
-import "../../../client/src/App.css"
+
 import { Fragment } from "react";
 
 import {Link} from "react-router-dom";
@@ -12,7 +12,6 @@ const Navbar = ({users: {isAuthenticated},logout})=>{
     const authLinks =(
         <ul>
         <li>
-            <code></code>
             <Link onClick={logout} to="/">logout</Link>
         </li>
     </ul>
