@@ -31,10 +31,10 @@ function Sidebar({users: {user},getCurrentProfile}){
                 <div>
                     <Link to="/home"><img src={image} onError={onError} className="profile" alt="image"></img></Link>
                 </div>
-                <Link href="#" to="/home">Home</Link> 
-                <Link href="#" to="/post">Posts</Link> 
-                <Link href="#" to="/developers">Developers</Link>
-                <Link href="#" to="/settings">Settings</Link>
+                <Link  to="/home">Home</Link> 
+                <Link  to="/post">Posts</Link> 
+                <Link  to="/developers">Developers</Link>
+                <Link  to="/settings">Settings</Link>
             </div>
         </div>
     )
