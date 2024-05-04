@@ -7,7 +7,8 @@ import CommentItem from "./CommentItem"
 import { getPost } from "../../redux/modules/posts";
 import { getProfileImage } from "../utils";
 
-function Post({getPost, posts: {post,loading}}){
+function Post({getPost,users:{user} , posts: {post,loading}}){
+    
     let {id} = useParams()
   
     useEffect(()=>{
