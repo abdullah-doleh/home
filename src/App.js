@@ -44,7 +44,7 @@ function App() {
   return (
     
     <Provider store={store}>
-    <BrowserRouter basename='/'>
+    <BrowserRouter >
     
     <AlertProvider template={AlertTemplate}  {...options}>
       
@@ -54,7 +54,7 @@ function App() {
       
       <Routes>
         <Route exact path="/" element={<Landing/>}/>
-        <Route exact path="register" element={<Register/>}/>
+        <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/home" element={<Private component={Home}/>}/>
         <Route  exact path="/create-profile" element={<Private component={ProfileForm}/>}/>
