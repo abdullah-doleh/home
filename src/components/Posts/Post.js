@@ -5,19 +5,13 @@ import PostItem from "./PostItem";
 import CommentForm from "./CommentForm"
 import CommentItem from "./CommentItem"
 import { getPost } from "../../redux/modules/posts";
-import { getProfileImage } from "../utils";
 
-function Post({getPost,users:{user} , posts: {post,loading}}){
-    
+function Post({getPost, posts: {post,loading}}){
     let {id} = useParams()
-  
+
     useEffect(()=>{
-        getCurrentProfile();
-        if(user){
-            setImage(getProfileImage(user._id))
-        }
         getPost(id)
-    },[getPost,id,getProfileImage])
+    },[getPost,id])
 
     return loading || post === null ? null :(
         <div className="home">
