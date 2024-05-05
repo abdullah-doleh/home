@@ -9,7 +9,7 @@ const PostItem=({
     removeLike,
     deletePost,
     users,
-    post:{_id,text,name,user,likes,comments,date},//de-constract the variable to access them dirctly
+    post:{_id,text,name,user,likes,comments,date},//de constract the variable to access them dirctly
     showActions
 })=>{
   return(

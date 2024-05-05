@@ -20,7 +20,7 @@ function Sidebar({users: {user},getCurrentProfile}){
     },[getCurrentProfile,user])
     function onError(){
         if(!errored){
-            setErrored(true);
+            setErrored(true);;
             setImage(defaultImage)
         }
         
@@ -31,10 +31,10 @@ function Sidebar({users: {user},getCurrentProfile}){
                 <div>
                     <Link to="/home"><img src={image} onError={onError} className="profile" alt="image"></img></Link>
                 </div>
-                <Link  to="/home">Home</Link> 
-                <Link  to="/post">Posts</Link> 
-                <Link  to="/developers">Developers</Link>
-                <Link  to="/settings">Settings</Link>
+                <Link to="/home">Home</Link> 
+                <Link to="/post">Posts</Link>
+                <Link to="/developers">Developers</Link>
+                <Link to="/settings">Settings</Link>
             </div>
         </div>
     )
