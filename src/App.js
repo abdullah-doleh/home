@@ -43,7 +43,7 @@ function App() {
     },[])
   return (
     <Provider store={store}>
-    <BrowserRouter basename='/'>
+    <HashRouter basename="/app">
     <AlertProvider template={AlertTemplate}  {...options}>
     <Fragment>
       <Alert/>
@@ -70,7 +70,7 @@ function App() {
             </script>
       </Fragment>
       </AlertProvider>
-    </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }
