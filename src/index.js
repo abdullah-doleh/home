@@ -7,6 +7,6 @@ ReactDOM.render(
   <HashRouter>
     {/* The rest of your app goes here */}
   </HashRouter>,
-  root
+ 
 );
 
