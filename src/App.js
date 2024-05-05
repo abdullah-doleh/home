@@ -43,7 +43,7 @@ function App() {
     },[])
   return (
     <Provider store={store}>
-    <HashRouter basename="/app">
+    <HashRouter basename="/app" future={{ v7_startTransition: true}}>
     <AlertProvider template={AlertTemplate}  {...options}>
     <Fragment>
       <Alert/>
