@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Routes , Route,HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes , Route } from 'react-router-dom';
 import {Fragment , useEffect} from "react";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
@@ -43,7 +43,7 @@ function App() {
     },[])
   return (
     <Provider store={store}>
-    <HashRouter basename="/app" future={{ v7_startTransition: true}}>
+    <BrowserRouter>
     <AlertProvider template={AlertTemplate}  {...options}>
     <Fragment>
       <Alert/>
@@ -70,7 +70,7 @@ function App() {
             </script>
       </Fragment>
       </AlertProvider>
-      </HashRouter>
+    </BrowserRouter>
     </Provider>
   );
 }
