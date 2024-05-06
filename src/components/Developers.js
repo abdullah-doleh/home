@@ -17,7 +17,6 @@ function Developers({user,getProfiles, profiles:{profiles,loading}}){
                 <div className="home">
                     <div className="row">
                         {profiles.filter(profile => profile.user._id !== user._id).map((profile)=>{
-                            console.log(profile)
                             return (
                                 <div className="column" key={profile.user._id}>
                                  <Link to={`/profile/${profile.user._id}`}>   <Developer profile={profile}/>
