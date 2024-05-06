@@ -20,7 +20,7 @@ function Developers({user,getProfiles, profiles:{profiles,loading}}){
                             console.log(profile)
                             return (
                                 <div className="column" key={profile.user._id}>
-                                 <Link to={`/profile/${profile.user._id}`}>   <Developer profile={profile}/>
+                                 <Link to={`/profile/${profile.user._id}`}><Developer profile={profile}/>
                                  </Link>
                                 </div>
                             )
