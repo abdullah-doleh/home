@@ -31,72 +31,71 @@ const Home = ({
         }
         
     }
-    return(
+    return (
         <div className="home">
-            {profile ===null ?(
+            {profile === null ? (
                 <div>
-                    <p style={{padding:10}}>Pleas create a profile</p>
-                    <Link to="/create-profile" className="btn btn-primary">create profile</Link>
+                    <p style={{ padding: 10}}>Please create a profile</p>
+                    <Link to="/create-profile" className="btn btn-primary">Create Profile</Link>
                 </div>
-    ):(
-        <div>
-        <div className="home-row">
-        <div className="home-column" style={{textAlign:"center"}}>
-        <img src={image} className="profile-picture" alt="image" onError={onError}></img>
-        <p className="name">{profile.user.name}</p>
-        </div>
-        <div className="home-column">
-            <BasicInfo profile={profile}/>
-            <div className="social">
-                {profile.social ? Object.keys(profile.social)
-                    .filter(media=>profile.social[media]!=="")
-                    .map(media =>{
-                        return(
-                            <a key={media} rel="noreferree" target="_blank" href={profile.social[media]}>
-                                <i className={`fab fa-${media} fa-2z` }></i>
-                            </a>
-                        )
-                    })
-            :null}
+            ): (
+                <div>
+                    <div className="home-row">
+                        <div style={{textAlign: "center"}} className="home-column">
+                            <img src={image} className="profile-picture" alt="profile" onError={onError}></img>
+                            <p className="name">{profile.user.name}</p>
+                        </div>
+                        <div className="home-column">
+                            <BasicInfo profile={profile}/>
+                            <div className="social">
+                                { profile.social ? Object.keys(profile.social)
+                                                    .filter(media => profile.social[media] !== "")
+                                                    .map(media => {
+                                                        return (
+                                                            <a key={media} rel="noreferrer" target="_blank" href={profile.social[media]}>
+                                                                <i className={`fab fa-${media} fa-2x`}></i>
+                                                            </a>
+                                                        )
+                                                    })
 
-            </div>
-        </div>
-        </div>
-        <div className="home-row">
-            <div className="home-column">
-                <div className="home-row">
-                    <div className="home-column">
-                        <h3>Education</h3>
+                                : null }
+                            </div>
+                        </div>
                     </div>
-                    <div className="home-column">
-                        <Link to="/add-education" className="add-button">
-                            <i className="fa fa-plus-circle fa-2x"></i>
-                        </Link>
+                    <div className="home-row">
+                        <div className="home-column">
+                            <div className="home-row">
+                                <div className="home-column">
+                                    <h3>Education</h3>
+                                </div>
+                                <div className="home-column">
+                                    <Link to="/add-education" className="add-button">
+                                        <i className="fa fa-plus-circle fa-2x"></i>
+                                    </Link>
+                                </div>
+                            </div>
+                            <Education profile={profile} deleteEducation={deleteEducation}/>
+                        </div>
+                        <div className="home-column">
+                            <div className="home-row">
+                                <div className="home-column">
+                                    <h3>Experience</h3>
+                                </div>
+                                <div className="home-column">
+                                    <Link to="/add-experience" className="add-button">
+                                        <i className="fa fa-plus-circle fa-2x"></i>
+                                    </Link>
+                                </div>
+                            </div>
+                            <Experience profile={profile} deleteExperience={deleteExperience}/>
+                        </div>
                     </div>
-                </div> 
-                <Education profile={profile} deleteEducation={deleteEducation}/>
-            </div>
-             <div className="home-column">
-            <div className="home-row">
-                    <div className="home-column">
-                        <h3>Experience</h3>
-                    </div>
-                    <div className="home-column">
-                        <Link to="/add-experience" className="add-button">
-                            <i className="fa fa-plus-circle fa-2x"></i>
-                        </Link>
-                    </div>
-                
-                <Experience profile={profile} deleteExperience={deleteExperience}/>
-            </div>
-             </div>
-             </div>
-            
-        </div>
-    )}
-        </div>
+                </div>
+            )}
+
+        </div> 
     )
-};
+}
 
 const mapToStateToProps =(state)=>({
   profiles:  state.profiles,
