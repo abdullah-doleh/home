@@ -25,7 +25,7 @@ import Posts from './components/Posts/Posts';
 import Post from './components/Posts/Post';
 const options={
   positon:positions.TOP_RIGHT,
-  timeout:5000,
+  timeout:5000, 
   offset:"30px",
   transitions:transitions.SCALE,
 };
@@ -43,7 +43,7 @@ function App() {
     },[])
   return (
     <Provider store={store}>
-    <BrowserRouter basename='/home'>
+    <BrowserRouter>
     <AlertProvider template={AlertTemplate}  {...options}>
     <Fragment>
       <Alert/>

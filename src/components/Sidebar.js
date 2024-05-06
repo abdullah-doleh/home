@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import { useEffect,useState } from "react";
 import { getCurrentProfile } from "../redux/modules/profiles";
-import { getProfileImage } from "../utils/index";
+import { getProfileImage } from "../utils";
 import defaultImage from "../assets/default.png"
 
 function Sidebar({users: {user},getCurrentProfile}){
@@ -20,8 +20,8 @@ function Sidebar({users: {user},getCurrentProfile}){
     },[getCurrentProfile,user])
     function onError(){
         if(!errored){
-            setErrored(true);
-            setImage(defaultImage);
+            setErrored(true);;
+            setImage(defaultImage)
         }
         
     }
