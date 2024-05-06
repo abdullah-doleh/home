@@ -43,7 +43,7 @@ function App() {
     },[])
   return (
     <Provider store={store}>
-    <BrowserRouter basename='home'>
+    <BrowserRouter basename='/'>
     <AlertProvider template={AlertTemplate}  {...options}>
     <Fragment>
       <Alert/>
